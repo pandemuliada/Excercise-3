@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Excercise 3 - Filtering Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    #formAdd {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="wrapper" class="mx-auto" style="width: 90%;">
+    <h1 class="text-center mb-5 mt-3">Planets Data</h1>
+    <!-- FILTER -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="" class="mr-3">Filter By</label>
+            <select id="filter" class="form-control">
+              <option value="nameAsc">Name Ascending</option>
+              <option value="nameDesc">Name Descending</option>
+              <option value="popAsc">Population Ascending</option>
+              <option value="popDesc">Population Descending</option>
+              <option value="orbAsc">Orbital Period Ascending</option>
+              <option value="orbDesc">Orbital Period Descending</option>
+            </select>
+          </div>
+          <div class="form-group ml-2">
+            <button class="btn btn-primary" id="btnFilter">Filter</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-right">
+        <button type="button" class="btn btn-outline-primary w-25 text-center" id="addBtn">Add Data</button>
+      </div>
+    </div>
+    <!-- END FILTER -->
+    <hr>
+    <!-- FORM ADD -->
+    <div class="form-inline mb-4 mt-4" id="formAdd">
+      <input type="text" class="form-control mb-2 mr-sm-2" id="ipName" placeholder="Planet Name">
+      <input type="text" class="form-control mb-2 mr-sm-2" id="ipOrb" placeholder="Orbital Period">
+      <input type="text" class="form-control mb-2 mr-sm-2" id="ipClimate" placeholder="Climate">
+      <input type="text" class="form-control mb-2 mr-sm-2" id="ipPopulation" placeholder="Population">
+      <input type="text" class="form-control mb-2 mr-sm-2" id="ipTerrain" placeholder="Terrain">
+
+      <button class="btn btn-primary mb-2" id="btnSubmit">Submit</button>
+    </div>
+    <!-- END -->
+
+    <table class="table mb-5">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Orbital Period</th>
+          <th>Climate</th>
+          <th>Population</th>
+          <th>Terrain</th>
+        </tr>
+      </thead>
+      <tbody id="bodyRow">
+        <!-- Content Will Appear Here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
